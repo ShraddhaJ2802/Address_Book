@@ -1,61 +1,43 @@
 package com.bridgelab.addressbook;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddressBook {
 
-    public static void addNewPerson() {
-        Scanner sc=new Scanner(System.in);
 
-        System.out.println("Enter First Name:");
+    private String city;
+    private long zip;
+    private String state;
 
-        String  firstName= sc.nextLine();
-
-        Scanner sc1=new Scanner(System.in);
-
-        System.out.println("Enter last Name:");
-
-        String  lastName= sc1.nextLine();
-
-        Scanner sc2=new Scanner(System.in);
-
-        System.out.println("Enter the address:");
-
-        String  address= sc2.nextLine();
-
-        Scanner sc3=new Scanner(System.in);
-
-        System.out.println("Enter the city:");
-
-        String  city= sc3.nextLine();
-
-        Scanner sc4=new Scanner(System.in);
-
-        System.out.println("Enter the state:");
-
-        String  state= sc4.nextLine();
-
-        Scanner sc5=new Scanner(System.in);
-
-        System.out.println("Enter the zip code:");
-
-        String  zipCode= sc5.nextLine();
-
-        Scanner sc6=new Scanner(System.in);
-
-        System.out.println("Enter the email:");
-
-        String  email= sc6.nextLine();
-
-        System.out.println("Enter the phone no:");
-
-        int phoneno= sc6.nextInt();
-
-
-
-
-
-
-
+    public String getCity() {
+        return city;
     }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public long getZip() {
+        return zip;
+    }
+
+    public void setZip(long zip) {
+        this.zip = zip;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    @Override
+    public String toString() {
+        return "Address [city=" + city + ", zip=" + zip + ", state=" + state
+                + "]";
+    }
+
 }
