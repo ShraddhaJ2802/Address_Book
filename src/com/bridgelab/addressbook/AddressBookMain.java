@@ -95,13 +95,29 @@ public class AddressBookMain implements AddressBookInterface{
 
     @Override
     public void delete() {
+        System.out.println("Enter your First name:");
+        String fname = s.next();
 
+        Iterator<Person> iterator = list.listIterator();
+        while (iterator.hasNext()) {
+            Person person = iterator.next();
+
+            if (fname.equals(person.getFname())) {
+                list.remove(person);
+            }
+        }
     }
 
     @Override
     public ArrayList<Person> list() {
-        return null;
+        return list;
     }
 
+    public void print() {
+        Iterator<Person> it = list.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+    }
 
 }
